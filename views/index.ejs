@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <nav>
+      <button><a href="/landing">Go to landing</a></button>
+      <button><a href="/comments/new">Create a new Comment</a></button>
+    </nav>
+    <h1>Displaying comments</h1>
+
+    <% for( const comment of comments){ %>
+
+    <div class="box">
+      <h1><%= comment.user %></h1>
+      <h3><%= comment.comment %></h3>
+
+      <a href="/<%= comment.id %>">Show the comment</a>
+      <a href="/<%= comment.id %>/edit">Modify</a>
+
+      <form action="/<%= comment.id %>?_method=DELETE" method="post">
+        <button>Delete</button>
+      </form>
+    </div>
+
+    <% } %>
+  </body>
+</html>

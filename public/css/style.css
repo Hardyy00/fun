@@ -1,0 +1,18 @@
+body {
+  background-color: slategray;
+}
+
+/* nav {
+  border: 1px solid black;
+} */
+nav > button {
+  margin-left: 87%;
+  height: 2.5rem;
+  border-radius: 14px;
+  border: 1px solid black;
+  width: 7rem;
+}
+
+.box {
+  padding-left: 2rem;
+}
